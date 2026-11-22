@@ -17,4 +17,4 @@ https://zaki-19.github.io/simple-calculator/
 - JavaScript
 
 ## Author
-Zaki (zaki-19)
+ZAKARIA DEHACHE (zaki-19)

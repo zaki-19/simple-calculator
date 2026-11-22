@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1e1e2f;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  width: 320px;
+  padding: 20px;
+  background: #2b2b40;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+#display {
+  width: 100%;
+  height: 70px;
+  margin-bottom: 20px;
+  padding: 0 15px;
+  font-size: 2rem;
+  text-align: right;
+  color: #ffffff;
+  background: #1e1e2f;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  height: 60px;
+  font-size: 1.3rem;
+  color: #ffffff;
+  background: #3a3a55;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #4b4b6e;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* Operators */
+.btn[data-value="+"],
+.btn[data-value="-"],
+.btn[data-value="*"],
+.btn[data-value="/"] {
+  background: #ff9f43;
+}
+
+.btn[data-value="+"]:hover,
+.btn[data-value="-"]:hover,
+.btn[data-value="*"]:hover,
+.btn[data-value="/"]:hover {
+  background: #ffb066;
+}
+
+/* Clear button */
+.btn[data-value="C"] {
+  background: #ee5253;
+}
+
+/* Equals button: full width row */
+.btn[data-value="="] {
+  grid-column: span 4;
+  background: #10ac84;
+}
